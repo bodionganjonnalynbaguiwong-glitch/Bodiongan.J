@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($p_SESSION['user'])){
+if(!isset($_SESSION['user'])){
     header("Location: index.php");
     exit();
 }
@@ -11,9 +11,10 @@ if(!isset($p_SESSION['user'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <a ref="index.php"></a>
 </head>
 <body>
-    <h1>Welcome to my Page</h1>
+    <h2>Welcome, <?php echo $_SESSION['user']?>!</h2>
+    <a href="main.php">click me!</a>
+
 </body>
 </html>
